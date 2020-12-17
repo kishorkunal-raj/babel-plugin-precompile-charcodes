@@ -7,6 +7,13 @@ matrix:
     - node_js: '4'
     - node_js: '0.12'
       env: NO_ESLINT=true
+    - node_js: '5'
+      arch: ppc64le
+    - node_js: '4'
+      arch: ppc64le
+    - node_js: '0.12'
+      arch: ppc64le
+      env: NO_ESLINT=true
 
 script: "[[ $NO_ESLINT == true ]] && npm run test-012 || npm test"
 
